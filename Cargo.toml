@@ -4,3 +4,14 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+
+
+[profile.dev]
+panic = 'abort'
+no-std = true
+
+[profile.release]
+opt-level = 3
+debug = false
+lto = true
+no-std = true
